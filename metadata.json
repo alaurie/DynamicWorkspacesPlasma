@@ -9,7 +9,7 @@
         "Description": "GNOME-style dynamic virtual desktops with automatic Shift+T custom tile layout and secondary monitor window placement syncing",
         "Icon": "preferences-desktop-virtual",
         "Id": "dynamicworkspaces",
-        "License": "GPL-2.0-or-later",
+        "License": "MIT",
         "Name": "Dynamic Workspaces",
         "Version": "1.0.0"
     },

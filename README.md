@@ -1,4 +1,10 @@
+<p align="center">
+  <img src="assets/icon.png" alt="Dynamic Workspaces Icon" width="128" height="128" />
+</p>
+
 # Dynamic Workspaces for KDE Plasma 6 (KWin)
+
+**Version:** `1.0.0` · **Requires:** KDE Plasma 6 (KWin 6) · **License:** [MIT](LICENSE)
 
 A KWin 6 script that brings **GNOME-style dynamic virtual desktops** to KDE Plasma 6, with full support for **Virtual Desktops Only on Primary** and **Shift+T / Shift+Drag Custom Tiling** on secondary monitors.
 
@@ -12,7 +18,27 @@ A KWin 6 script that brings **GNOME-style dynamic virtual desktops** to KDE Plas
 
 ## Installation (KDE Plasma 6)
 
+### Option 1: KDE Store (System Settings)
+
+1. Open **System Settings → Window Management → KWin Scripts**.
+2. Click **Get New...** and search for **Dynamic Workspaces**.
+3. Install and enable **Dynamic Workspaces**.
+
+### Option 2: From `.kwinscript` Package
+
+Download `dynamicworkspaces.kwinscript` (from the repository or Releases), then either:
+- Click **Install from File...** in **System Settings → Window Management → KWin Scripts**, or
+- Install via CLI:
+
 ```bash
+kpackagetool6 --type KWin/Script --install dynamicworkspaces.kwinscript
+```
+
+### Option 3: From Source
+
+```bash
+git clone https://github.com/alaurie/DynamicWorkspacesPlasma.git
+cd DynamicWorkspacesPlasma
 chmod +x install.sh
 ./install.sh
 ```
@@ -20,7 +46,7 @@ chmod +x install.sh
 Then enable **Dynamic Workspaces** in:
 **System Settings → Window Management → KWin Scripts**
 
-Or via CLI:
+Or enable via CLI:
 
 ```bash
 kwriteconfig6 --file kwinrc --group Plugins --key dynamicworkspacesEnabled true
@@ -39,6 +65,14 @@ Open the configure button next to **Dynamic Workspaces** in **System Settings �
 - **Preserve secondary monitor window tiles and geometry across desktops** (default: on)
 - **Enable debug logging (`journalctl`)** (default: off)
 
+## Packaging (`.kwinscript`)
+
+To rebuild the `.kwinscript` package for distribution or KDE Store upload:
+
+```bash
+zip -r dynamicworkspaces.kwinscript metadata.json contents/
+```
+
 ## Debugging
 
 Enable debug logging in the script settings, then watch KWin logs:
@@ -46,3 +80,7 @@ Enable debug logging in the script settings, then watch KWin logs:
 ```bash
 journalctl -b -f | grep -i "dynamicworkspaces:"
 ```
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
