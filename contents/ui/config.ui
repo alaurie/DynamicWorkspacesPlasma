@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>KWin::DynamicWorkspacesConfigForm</class>
+ <widget class="QWidget" name="KWin::DynamicWorkspacesConfigForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>460</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="workspacesGroup">
+     <property name="title">
+      <string>Dynamic Workspaces</string>
+     </property>
+     <layout class="QVBoxLayout" name="workspacesLayout">
+      <item>
+       <widget class="QCheckBox" name="kcfg_KeepEmptyTrailingDesktop">
+        <property name="text">
+         <string>Always keep one empty virtual desktop at the end</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="kcfg_RemoveEmptyIntermediateDesktops">
+        <property name="text">
+         <string>Automatically remove empty virtual desktops</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="namePrefixLayout">
+        <item>
+         <widget class="QLabel" name="namePrefixLabel">
+          <property name="text">
+           <string>New desktop name prefix (optional):</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="kcfg_DesktopNamePrefix">
+          <property name="placeholderText">
+           <string>Leave blank for KWin default</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="tilingGroup">
+     <property name="title">
+      <string>Multi-Monitor &amp; Custom Tiling (Shift+T)</string>
+     </property>
+     <layout class="QVBoxLayout" name="tilingLayout">
+      <item>
+       <widget class="QCheckBox" name="kcfg_SyncSecondaryTiles">
+        <property name="text">
+         <string>Copy custom tile layout to new/switched desktops on secondary monitors</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="kcfg_SyncPrimaryTiles">
+        <property name="text">
+         <string>Also copy custom tile layout to new desktops on primary monitor</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="kcfg_PreserveSecondaryWindowPlacement">
+        <property name="text">
+         <string>Preserve secondary monitor window tiles and geometry across desktops</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="kcfg_DebugLogging">
+     <property name="text">
+      <string>Enable debug logging (journalctl)</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

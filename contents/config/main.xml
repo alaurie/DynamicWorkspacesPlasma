@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+  <kcfgfile name=""/>
+  <group name="">
+    <entry name="KeepEmptyTrailingDesktop" type="bool">
+      <default>true</default>
+    </entry>
+    <entry name="RemoveEmptyIntermediateDesktops" type="bool">
+      <default>true</default>
+    </entry>
+    <entry name="SyncSecondaryTiles" type="bool">
+      <default>true</default>
+    </entry>
+    <entry name="SyncPrimaryTiles" type="bool">
+      <default>false</default>
+    </entry>
+    <entry name="PreserveSecondaryWindowPlacement" type="bool">
+      <default>true</default>
+    </entry>
+    <entry name="DesktopNamePrefix" type="string">
+      <default></default>
+    </entry>
+    <entry name="DebugLogging" type="bool">
+      <default>false</default>
+    </entry>
+  </group>
+</kcfg>
